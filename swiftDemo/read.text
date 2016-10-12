@@ -1,0 +1,6 @@
+一、本项目为表情键盘的例子
+二、表情键盘的组成要素主要为以下几个部分：
+1、键盘本身为一个collectionView，用于存放含有表情image的button，这个很简单；
+2、表情来源分为两种，一种是系统表情，用唯一unicode标识，可直接显示，第二种是自定义表情，定义好表情的图片和标识就行，下一步
+3、无论是textView还是Label，有一个属性为NSAttributedString，可存放图片，用NSTextAttachment初始化，而NSTextAttachment有属性Image，这样就可以输入和显示表情文字
+4、暂时这么多，等我解决里面的Bug

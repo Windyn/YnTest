@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FaceKeyboard" customModule="swiftDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="begin" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rHa-l5-gHu">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddV-vH-Iz1">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="CNz-mL-DDR"/>
+                        <constraint firstAttribute="height" constant="30" id="uwM-I3-4dE"/>
+                    </constraints>
+                    <state key="normal" title="face"/>
+                    <connections>
+                        <action selector="faceBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="KP2-j2-5TJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdF-rI-HLF">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="lBJ-5O-EXC"/>
+                        <constraint firstAttribute="width" constant="30" id="t8g-k5-dbn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                    <state key="normal" title="+"/>
+                    <connections>
+                        <action selector="sendAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ki6-e6-oal"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ddV-vH-Iz1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="1jS-kr-1dz"/>
+                <constraint firstAttribute="trailing" secondItem="rHa-l5-gHu" secondAttribute="trailing" constant="75" id="N46-D0-20c"/>
+                <constraint firstAttribute="bottom" secondItem="rHa-l5-gHu" secondAttribute="bottom" constant="5" id="Y0R-gQ-Hqi"/>
+                <constraint firstItem="VdF-rI-HLF" firstAttribute="leading" secondItem="ddV-vH-Iz1" secondAttribute="trailing" constant="5" id="YRB-d8-KLN"/>
+                <constraint firstItem="rHa-l5-gHu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="f1E-Rz-Nlk"/>
+                <constraint firstItem="rHa-l5-gHu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="fZW-eN-rZy"/>
+                <constraint firstItem="VdF-rI-HLF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="wR1-qg-cYd"/>
+                <constraint firstItem="ddV-vH-Iz1" firstAttribute="leading" secondItem="rHa-l5-gHu" secondAttribute="trailing" constant="5" id="zhh-rg-WL2"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="faceButton" destination="ddV-vH-Iz1" id="9Dw-My-6E9"/>
+                <outlet property="textView" destination="rHa-l5-gHu" id="Hhs-fl-z6j"/>
+            </connections>
+            <point key="canvasLocation" x="28.5" y="60"/>
+        </view>
+    </objects>
+</document>
